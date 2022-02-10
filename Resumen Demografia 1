@@ -1,0 +1,81 @@
+---
+title: "Resumen Demografia"
+author: "Maria Elena Lobato"
+date: "9/2/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<center style="color: lightblue">
+## **Población y demografia** 
+</center>
+
+<span style="color:blue">**Población:**</span> Conjunto de individuos constituidos de forma estable, ligado por vinculos de reproducción e identificado por características territoriales, poíticas, jurídicas, étnica o religiosas.
+
+Una población se define si tiene continuidad en e tiempo y si está asegurada por vincuos de reproducción que garantizan la sucesion de generaciones.
+
+Una población se extingue porque la natalidad es insuficiente para compensar la mortalidad o porque poblaciones inicialmente distintas se fusionan entre si.
+
+<span style="color:blue">**Demografia:**</span> Estudia aquellos procesos que determinan la formación, conservación y desaparición de pobaciones (fecundidad,mortalidad y movilidad).
+
+
+
+#### **Componentes**
+La unidad basica son los individuos, la demografia se enfoca en sexo, edad, estado civil, lugar de nacimiento y residencia que permite construir un perfil individua útil para interpretar y entender fenómenos relacionados con fecundidad, mortalidad y movilidad.
+La demografia tiene como fin entender por qué se encuentran colectivos en fuerte crecimiento y otros en declive.
+
+
+
+#### **Procesos de cohesion y agregación** 
+Los fenomenos que determinan el crecimiento y la estructura de poblaciones son factores de cohesión y repulsión. Las parejas, núcleos familiares se forman por nupcialidad, fecundidad, y movilidad y se deshacen por disolución del matrimonio, muerte y movilidad de signo contrario.
+
+Los procesos de agregación y de cohesión son esencialmente selectivos, no ejercen la misma presión sobre cada individuo y la diversa intensidad de su efecto no se debe a factores casuales.
+
+Es objeto de estudio de la demografía la forma en que se distribuyen y agrupan las poblaciones en parejas, familias, comunidades, etc.Las distintas combinaciones de las fuerzas de cohesión y de sus contrarias determinan los infinitos ordenamientos estructurales posibles de las poblaciones.
+
+
+
+#### **Lo biologico y lo social**
+Gran parte de los eventos y fenómenos demográficos son manifestaciones de procesos biológicos,el proceso de agregación en parejas y núcleos familiares está muy condicionado por las características biológicas del ser humano.
+
+La movilidad está fuertemente condicionada por la curva de desarrollo de las capacidades físicas y psíquicas del individuo.
+
+La mortalidad según la edad y el sexo están condicionadas por el tipo de alimentación,la tecnología médica,el nivel de higiene individual y colectiva,el entorno físico y geográfico, etc.
+
+Y el nivel de fecundidad se ve influido por factores culturales y religiosos,el conocimiento de las técnicas anticonceptivas y su accesibilidad por parte de las parejas,el nivel económico, y el grado de apoyo dado a la familia por parte de la sociedad.
+
+
+
+#### **Los métodos de la demografia**
+<span style="color:blue">**Fuente:**</span> Instrumento institucional u organizativo mediante
+el cual se recogen los datos de interés demográfico.
+
+<span style="color:blue">**Naturaleza de los datos:**</span> Se refiere a la unidad objeto de la recogida de datos, a las características descritas, su elaboración y presentación.
+
+<span style="color:blue">**Fiabilidad y error:**</span> Correspondencia entre el dato estadístico y la realidad que debe describir.
+
+
+
+#### **Los censos** 
+Los datos del tamaño de una población y de sus características se obtiene normalmente con una operación de recuento llamada *censo*.
+
+Es una operación de contabilidad: individual, universal, simultanea
+y con periocidad definida.
+
+La organización del censo requiere un conocimiento detallado del territorio que debe ser subdividido minuciosamente en secciones censales, cada una de las cuales es confiada a un agente censal.El agente debe visitar todos los domicilios y entregar a cada familia un cuestionario, luego debe proceder a su recogida.
+
+Las operaciones censales están reguladas por una ley que asegura su financiación, prescribe la obligatoriedad de las respuestas y garantiza el secreto de las informaciones recibidas y se efectúan bajo la responsabilidad de algún organismo público.
+
+
+
+#### **Naturaleza de los datos**
+
+<span style="color:blue">**Familia:**</span> Grupo de personas que residiendo en la misma vivienda familiar, comparten algunos gastos en común y están vinculados por lazos de parentesco.
+
+<span style="color:blue">**Hogar:**</span> Conjunto de personas que residiendo en la misma vivienda, comparten gastos comunes ocasionados por el uso de la vivienda y/o gastos de alimentación.
+
+La riqueza de la información que se deduce de un censo no depende solamente del número y tipo de preguntas, sino también del tratamiento
+que se da a las distintas características recogidas, plantear preguntas básicas, esenciales, a las que se pueda dar fácil e inequívoca respuesta,
+proporciona datos objetivos y precisos.
