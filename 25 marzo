@@ -1,0 +1,81 @@
+---
+title: "25marzo"
+author: "Maria Elena Lobato"
+date: '2022-03-26'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<center style="color: lightblue"> <h1>Tiempo de duplicidad de una poblacion</h1> </center>
+
+Lo que se intenta plantear y conocer es en que tiempo una población determinada se dupica, para ello se planta la siguiente ecuación que está basada en la tasa de crecimiento exponencial.
+
+Para conocer cuando se duplica la población necesitamos despejar n 
+$$P_{t+n}=P_te^{rn}$$
+$$\rightarrow \frac{P_{t+n}}{P_t}=e^{rn}$$
+
+Como queremos conocer cuando se duplica 
+$$\rightarrow \frac{P_{t+n}}{P_t}=2$$
+$$\rightarrow 2=e^{rn}$$
+$$\rightarrow In(2)=rn$$
+$$\rightarrow n=\frac{In(2)}{r}$$
+
+**Ejercicio.** Queremos conocer en que tiempo se va a duplicar la poblacion de Mexico que es de 50,000,000 si r=3.1% 
+
+$$n=\frac{In(2)}{0.031}=22.35$$
+
+Se duplicara en 22 años
+
+Repetir calculo con r=1.4%
+$$n=\frac{In(2)}{0.014}=49.51$$
+Se duplicara en 41 años 
+
+<center style="color: lightblue"> <h1>Dinamica demografica</h1> </center>
+Se relaciona con el tamaño, composicion, las pérdidas y ganancias de la población
+
+**Tamaño:**Cantidad de personas en un territorio en un tiempo determinado
+
+**Composición:** Sexo, grupos de edad, caracteristicas de una población 
+
+**Pérdidas y ganancias:** Vinculados con mortalidad, fecundidad y migración
+
+<span style="color:purple">**Tasas brutas en la población**</span>
+
+No considera la composición de la población. La vamos a definir de la siguiente manera
+$$TB=\frac{evento}{poblacion\,media}$$
+Poblacion media- promedio de poblacion en un periodo de tiempo 
+
+**Ejercicio.**Calcular las tasas brutas de os siguientes eventos de EUA del 2004 al 2005
+P(2004)=293657000  P(2004)=296410000
+
+M(2004)=2425000 N(2004)=4129000
+
+I(2004)=1122000 E(2004)=73000
+$$TBN=\frac{4129000}{295033500}=0.013995$$
+$$TBM=\frac{2425000}{295033500}=0.0082$$
+$$TBI=\frac{1122000}{295033500}=0.0038$$
+$$TBE=\frac{73000}{295033500}=0.00024$$
+
+<span style="color:purple">**Tasas especificas en la poblacion**</span>
+
+Tienen reación con las caracteristicas poblacionales. Se plantean de la siguiente forma
+$$Te^1=\frac{E^i}{Pob^i}$$
+$E^i$ numero del evento de caracteristica i
+
+$Pob^i$ población media con carcteristica i
+
+<span style="color:green">Poporción de sexo</span>
+
+Permite conocer la cantidad de hombres que existen con relación a las mujeres
+
+Indicador que muestra el balance entre el numero de hombres y mujeres
+
+La proporción masculina se callcua dividiendo e numero de hombres entre del de mujeres 
+$$PS^i=\frac{hombres}{mujeres}$$
+**Ejm** Brasil:H(2008)0-4 años=8226630 M(2008)0-4 años=7976611
+$$PS^{(0-4)}=\frac{8226630}{7976611}=1.0313$$
+Italia:H(2008)0-4 años=1453690 M(2008)0-4 años=1373687
+$$PS^{(0-4)}=\frac{1453690}{1373687}=1.058$$
