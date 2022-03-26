@@ -1,0 +1,72 @@
+---
+title: "Untitled"
+author: "Maria Elena Lobato"
+date: '2022-03-16'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<center style="color: lightblue"> <h1>Ecuacion compensadoran</h1> </center>
+Es uno de los principales elementos de la demografia y se plantea de la sig manera.
+
+$$P_{t+n}=P_t+(N_{t\rightarrow t+n}-D_{t\rightarrow t+n}) +(I_{t\rightarrow t+n}-E_{t\rightarrow t+n})$$
+$$ P_{2022}=P_{2021}+N_{21/22}-D_{21/22}+I_{21/22}-E_{21/22}$$
+$$CP=CN+CS$$
+donde $CN:Crecimiento\, Natural (nacen\, y\, mueren)$ y $CS:Crecimiento\, Social(migracion)$
+
+<span style="color:purple">**Ejemplo**</span>
+
+$P_{2004}=293657000$
+
+$P_{2005}=296420000$
+
+$N_{2004-2005}=4129000$
+
+$D_{2004-2005}=2425000$
+
+$I_{2004-2005}=1122000$
+
+$E_{2004-2005}=73000$
+
+$(296410000-293657000)=(4129000-2425000)+(1122000-73000)$
+
+$CP=2753000$
+
+$CN=1704000$
+
+$CS=1049000$
+
+**Migracion Nacional e Internacional**
+
+$$P_{t+n}=P_t+N_{t+n}-D_{t+n}+I_{t+n}-E_{t+n}+\hat{I}_{t+n}-\hat{E}_{t+n}$$
+
+$$CP=CN+CS_I+CS_{\hat{I}}$$
+
+$$\begin{array}{1}Entidades & CN & CS & \hat{CS} & CP\\
+------ & --- & --- & --- & --- \\
+Edo.Mex & 44441 & 49607 & -12202 & 81846\\
+Michoacan & 32585 & 44347 &3381  & 80313\\
+Chiapas & 35063 & 30486 & 7391 & 72942\\
+Baja\,California & 6724 & 9364 & -2653 & 13435 \\
+Nuevo\,Leon & 29314 & 29314 & 4996 & 52828 \\
+Jalisco & 2001 & 1044 & 174 & 3219 \\
+Sinaloa & 2629 & 699 & -2393 & 935 \\
+Guanajuato & 3228 & 1940 & 1306 & 6474\\
+-------- & --- & --- & --- & ---\\
+Total & 145191 & 166801 & 0 & 311992\end{array}$$
+
+<span style="color:green">**1) Tasa crecimiento anual (Poblacion)**</span>
+
+$$TCA= \frac{P_{t+n}-P_t}{P_t}$$
+
+<span style="color:green">**1) Tasa crecimiento anual (Poblacion)**</span>
+
+$$TCA= \frac{P_{t+n}-P_t}{P_t}$$
+
+<span style="color:green">**2) Tasa crecimiento exponencial (Poblacion)**</span>
+
+$$TCI=P_{t+n}-P_t+e^{rn}$$
+
+$$r= \frac{IN(\frac{P_{t+n}}{P_t})}{n}$$
