@@ -1,0 +1,73 @@
+---
+title: "11marzo"
+author: "Maria Elena Lobato"
+date: '2022-03-26'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<center style="color: lightblue"> <h1>Diagrama de Lexis</h1> </center>
+Ayuda a comprender algunos eventos y fenomenos demograficos a traves de una linea del tiempo.
+
+**Delimitacion temporal:** En demografia es esencial el tiempo como elemento indispensable para analizar la dinamica constante y cambios en espacios poblacionales.
+
+En particular, en demografia podemos definir dos tiempos
+
+<span style="color:purple">Tiempo calendario</span>
+
+<span style="color:purple">Tiempo de eventos demograficos</span>
+
+La edad se puede medir en dos sentidos, a partir del nacimiento o por los años que tiene
+
+<span style="color:blue">**Edad exacta**</span>
+
+$$Edad\,exacta=Años+\frac{dias}{365}$$
+
+<span style="color:blue">**Edad en años cumplidos**</span>
+
+
+
+Un elemento importante que interesa a la demografia es el numero de eventos que ocurren a traves del tiempo, en este sentido, en el diagrama de lexis se puede representar los nacimientos, defunciones, matrimonios etc.
+
+<span style="color:green">Flujo:</span> Con la poblacion que permanece en el tiempo
+
+<span style="color:green">Efectivo:</span> Ocurrencia de un evento en un tiempo determinado
+
+<span style="color:green">Cohorte:</span> Un grupo de individuos que experimentan un evento durante un tiempo determinado
+
+<span style="color:green">Generacion:</span> Un grupo de individuos que ace en un momento determinado
+
+Eventos demograficos en el diagrama 
+
+$$ab=nacimientos\, 1990$$
+$$ac+bd=dos\,lineas\,de\,vida\,1990-1991$$
+$$abc=defunciones\,1990$$
+$$cbd=defunciones\, 1991$$
+
+
+En demografia se pueden plantear 3 tipos de anaisis 
+
+**1)Analisis transversal:** Se asocia a un momento en el tiempo
+
+**2)Analisis longitudinal:** Se vincula con estudios a traves del tiempo (analisis de generación o cohorte)
+
+**3)Analisis retrospectivo:** Se vincula con estudios que se realizan en un tiempo pasado (analisis de vida de una poblacion adulta en su juventud)
+
+El diagrama de Lexis tiene que ver con un <span style="color:orange">analisis longitudinal</span>
+
+<span style="color:blue">Eventos demograficos:</span> nacimientos, defunciones, nupcialidad
+
+<span style="color:blue">Fenomenos demograficos:</span>fecundidad, mortalidad y migracion
+
+<center style="color: lightblue"> <h1>Las medidas en demografia</h1> </center>
+<span style="color:pink">**Medidas relativas**</span>
+
+**Razones:** cociente entre 2 magnitudes independientes
+$$\frac{P.mascuina}{P.femenina}\,x\,100$$
+**Proporciones:** relacion entre 2 medidas de efectivo o flujo
+$$\frac{P.masculina}{P.total}\,x\,100$$
+**Tasa:**cociente entre un flujo y un efectivo
+$$\frac{Nacimientos\,en \,un\,año}{P.masculina}\,x\,100$$
+
