@@ -1,0 +1,77 @@
+---
+title: "30marzo"
+author: "Maria Elena Lobato"
+date: '2022-03-30'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<center style="color: lightblue"> <h1>Ejercicios Tasa Bruta</h1> </center>
+Estado: Mexico
+
+Poblacion media:16,992,418
+
+Nacimientos: 184,447	
+
+Muertes:152,668	
+
+Inmigrantes:5,190,562	
+
+Emigrantes:1,344,291
+
+```{r}
+TB = function (x,y)(return (TB=x/y))
+y=16992418
+TB(184447,y)
+TB(152668,y)
+TB(5190562,y)
+TB(1344291,y)
+```
+
+**Calculo de tasas brutas**
+
+$$TBN=\frac{184,447}{16,992,418}=0.0108546$$
+Hay 11 nacimientos por cada 1000 habitantes en el Estado de Mexico
+
+$$TBM=\frac{152668}{16992418}=0.0089844$$
+Hay 9 muertos por cada 1000 habitantes en el Estado de Mexico
+
+$$TBI=\frac{5,190,562}{16,992,418}=0.30546341$$
+Hay 31 inmigrantes por cada 1000 habitantesen el Estado de Mexico
+
+$$TBE=\frac{1,344,291}{16,992,418}=0.07911122$$
+Hay 79 emigrantes por cada 1000 habitantes en el Estado de Mexico
+```{r}
+entidades= c("Aguascalientes","Mexico","Chiapas")
+tbn=c(0.0142886,0.01080,0.03949243)
+tbm=c(0.0069605,0.0089,0.02247131)
+tbi=c(0.1939034,0.03054,0.04490611)
+tbe=c(0.101438,0.07911,0.1270692)
+
+base=data.frame(entidades,tbn,tbm,tbi,tbe)
+base1=data.frame(entidades,base[,2:5]*1000)
+```
+
+<center style="color: lightblue"> <h1>Ejercicios proporcion de sexos al naciemiento</h1> </center>
+Entidad: Mexico
+
+Nacimientos hombres: 828,944
+
+Nacimientos mujeres: 800,264
+
+$$PSN=\frac{ 828,944}{800,264}=1.03$$
+En Mexico en el año 2020 nacen 103 niños por cada 100 niñas 
+
+<span style="color:purple">**Proporcion de niños por mujer**</span>
+$$PNM=\frac{Pob_{<5años}}{Pob_{fm}}$$
+$Pob_{<5años}=2827377$
+
+$Pob_{fm}=23855033$
+
+<center style="color: lightblue"> <h1>Tasa de dependencia</h1> </center>
+Se relaciona a las personas que tienen mas posibilidades de ser dependientes
+
+$$TD=\frac{(pob_{0-14}+pob_{65ymas})}{(pob_{15-64})}$$
