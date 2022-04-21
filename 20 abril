@@ -1,0 +1,80 @@
+---
+title: "20abril"
+author: "Maria Elena Lobato"
+date: '2022-04-21'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<center style="color: lightblue"> <h1>Fecundidad </h1></center>
+En la demografia existen dos conceptos que es necesario diferenciar
+
+Fecundidad se refiere al numero de hijos que tienen las mujeres
+
+Fertilidad se refiere a la capacidad biologica de la mujer a tener hijos
+
+Factores que impactan en la fecundidad de las mujeres
+
+-Economica           -Cultura
+
+-Estado civil        -Familia
+
+-Fisiologicos        -Morbilidad
+
+-Educacion           -Acceso a anticonceptivos
+
+-Mercado de trabajo  -Fertilidad
+
+<h4 style="color: blue">Tasa bruta de natalidad</h4>
+ $$TBN=\frac{Nacimientos}{Poblacion}$$
+
+Normalmente esta TBN se utiliza de manera anual y se interpreta en miles de personas
+
+**Ejemplo**
+
+Nacimientos=470900
+
+Poblacion=27720000
+
+$TBN=\frac{470900}{27720000}$
+
+La TBN tambien se puede interpretar multiplicandola por 100 personas
+
+
+<h4 style="color: blue">Tasas especificas de fecundidad</h4>
+
+Se define de la siguiente manera
+$$Tef=\frac{nacimiento^i}{Pob.femenina^i}$$
+
+**Ejemplo:**
+$$\begin {array}{1}Edad & Nacidos vivos & Pob.Femenina & Tef(por mil)\\
+------ & --- & --- & ---  \\
+15-19 & 14687 & 2974000 & 4.93\\
+20-24 & 116809 & 3404000 & 34.31\\
+25-29 & 307767 & 3688000 & 83.45\\
+30-34 & 389795 & 4286000 & 90.94\\
+35-39 & 209707 & 4776000 & 43.90\\
+40-44 & 31270 & 4243000 & 7.36\end{array}$$
+
+<h4 style="color: blue">Tasas generales de fecundidad</h4>
+$$TGF=\frac{\sum{15}{44}nacimientos}{\sum{15}{44}Pob femenina^i}$$
+**Ejemplo**
+
+$TGF=\frac{1070035}{23371000}=0.4570$
+
+45.70 nacimientos por cada mil mujeres en edad de 15 a 44
+
+<span style="color:green">**Ejercicio**</span>
+
+Calcular la tef para Mexico en el año 2010
+$$\begin {array}{1}Edad & Nacidos vivos & Pob.Femenina & Tef(por mil)\\
+------ & --- & --- & ---  \\
+15-19 & 464,102 & 5,505,991 & 84.29\\
+20-24 & 748,723 & 5,079,067 & 147.41\\
+25-29 & 624,181 & 4,582,202 & 136.21\\
+30-34 & 418,695 & 4,444,767 & 94.19\\
+35-39 & 205,503 & 4,328,249 & 47.47\\
+40-44 & 49,430 & 3,658,904 & 13.50\end{array}$$
