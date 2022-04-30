@@ -1,0 +1,39 @@
+---
+title: "29abril"
+author: "Maria Elena Lobato"
+date: '2022-04-30'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<span style="color:lightblue">Ejemplo</span>
+
+| Rango de edad | Nac. Totales | Mujeres | Nac.Mujeres | TGF     |
+|---------------|--------------|---------|-------------|---------|
+| 15-19         | 12130        | 727168  | 5895        | 0.01668 |
+| 20-24         | 42103        | 782583  | 20461       | 0.0538  |
+| 25-29         | 80933        | 791698  | 39331       | 0.1022  |
+| 30-34         | 93107        | 751566  | 45247       | 0.1239  |
+| 35-39         | 55985        | 814971  | 27207       | 0.06869 |
+| 40-44         | 11480        | 769345  | 5579        | 0.01492 |
+
+**Nacimientos hombres**
+
+15-19 $\rightarrow$ 6235
+
+20-24 $\rightarrow$ 21642
+
+25-29  $\rightarrow$ 41602
+
+30-34  $\rightarrow$ 47860
+
+35-39  $\rightarrow$ 28778
+
+40-44  $\rightarrow$ 5901
+
+$$Proporcion\,de\,sexos=\frac{152018}{143720}*100=1.0577*100=105.77$$
+$$\rightarrow S=\frac{100}{100+105.77}=0.485979$$
+$$TGF=\sum_{}^{}TEF*5=5*0.38019=1.90095$$
+$$TBR=1.90095*0.485979=0.9238$$
