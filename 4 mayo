@@ -1,0 +1,67 @@
+---
+title: "4mayo"
+author: "Maria Elena Lobato"
+date: '2022-05-05'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+<h4 style="color: lightblue"> TASAS EN EDADES AGRUPADAS </h4>
+$$TGrF=n*\sum_{i=15}^{44}tef^i$$
+$$TBR=n*\sum_{i=15}^{44}tef^i*S$$
+$$TNR=n*\sum_{i=15}^{44}tef^i*S*PS$$
+<span style="color:purple">**Actividad:**</span>
+Hacer un analisis comparativo de dos los dos municipios elegidos con respecto a las TGF y TBR. Añadir un poco de contexto sobre las diferencias de los municipios
+
+<center style="color:green"> <h5>Calimaya</h5></center> 
+
+En 2020, la población en Calimaya fue de 68,489 habitantes (48.7% hombres y 51.3% mujeres).
+
+Los rangos de edad que concentraron mayor población fueron 15 a 19 años (6,241 habitantes), 5 a 9 años (6,230 habitantes) y 10 a 14 años (6,218 habitantes). Entre ellos concentraron el 27.3% de la población total.
+
+En 2020, 0.61% de la población en Calimaya no tenía acceso a sistemas de alcantarillado, 0.52% no contaba con red de suministro de agua, 0.86% no tenía baño y 0.28% no poseía energía eléctrica.
+```{r}
+gpoedad <- c("15-19","20-24","25-29","30-34","35-39")
+nac1 <- c(9,24,27,13,5)
+nh1 <-c(3,8,14,5,3)
+nf1 <-c(6,16,13,8,2)
+pobf1 <- c(3170,2694,2764,2845,2963)
+
+propsex1=sum(nh1)/sum(nf1)*100
+S=(100/(100+propsex1))
+tef1 <- (nac1/pobf1)
+teff1 <- (nf1/pobf1)
+n=5
+TGrF=sum((nac1)/pobf1)*n
+TGF=sum(tef1)*n
+TBR = TGF*S
+tasas1 <- data.frame(gpoedad,nac1,pobf1,nf1,nh1,tef1,teff1)
+tasas1
+
+```
+<center style="color:green"> <h5>Coatepec Harinas </h5></center> 
+
+En 2020, la población en Coatepec Harinas fue de 38,643 habitantes (48% hombres y 52% mujeres)
+
+Los rangos de edad que concentraron mayor población fueron 0 a 4 años (4,283 habitantes), 5 a 9 años (4,207 habitantes) y 10 a 14 años (4,174 habitantes). Entre ellos concentraron el 32.8% de la población total.
+
+En 2020, 7.77% de la población en Coatepec Harinas no tenía acceso a sistemas de alcantarillado, 2.81% no contaba con red de suministro de agua, 7.63% no tenía baño y 0.99% no poseía energía eléctrica.
+```{r}
+nac2 <- c(91,154,123,75,40)
+nh2 <- c(49,84,71,37,20)
+nf2 <- c(42,70,52,38,20)
+pobf2 <- c(1877,1818,1598,1510,1319)
+
+propsex2=sum(nh2)/sum(nf2)*100
+S=(100/(100+propsex2))
+tef2 <- (nac2/pobf2)
+teff2 <- (nf2/pobf2)
+n=5
+TGrF2=sum((nac2)/pobf2)*n
+TGF2=sum(tef2)*n
+TBR2 = TGF*S
+tasas2 <- data.frame(gpoedad,nac2,pobf2,nf2,nh2,tef2,teff2)
+tasas2
+```
