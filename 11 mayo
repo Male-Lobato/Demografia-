@@ -1,0 +1,28 @@
+install.packages("dplyr")
+base1 <- read.csv(file.choose()) 
+base2 <- base1 %>%
+  as.tibble()%>%
+  mutate(gpoeda = case_when(EDAD >=0 & EDAD<=14 ~ 1,
+                            EDAD >=15 & EDAD<=29 ~ 2,
+                            EDAD >=30 & EDAD<=44 ~ 3,
+                            EDAD >=45 & EDAD<=59 ~ 4,
+                            EDAD >=60 & EDAD<=74 ~ 5,
+                            EDAD >=75 & EDAD<=89 ~ 6,
+                            EDAD >=90 & EDAD<=100 ~ 7,
+                            EDAD ==999  ~ 8),
+         conyu = case_when(SITUA_CONYUGAL==1|SITUA_CONYUGAL==5~1,
+                           SITUA_CONYUGAL==2 | SITUA_CONYUGAL==3 | SITUA_CONYUGAL==4~2,
+                           SITUA_CONYUGAL==6~3,
+                           SITUA_CONYUGAL==9~4))%>%
+  filter(MUN==1 | MUN==3)%>%
+  select(MUN,SITUA_CONYUGAL,conyu,EDAD,gpoeda,SEXO,FACTOR)
+
+table(base2$EDAD,base2$gpoeda)
+table(base2$SITUA_CONYUGAL,base2$conyu)
+table(base2$MUN)
+
+table(base2$SEXO)
+install.packages("questionr")
+require(questionr)
+wtd.table(base2$SEXO,weights = base2$FACTOR)
+wtd.table(base1$SEXO,weights = base1$FACTOR)
