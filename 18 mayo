@@ -1,0 +1,92 @@
+---
+title: "18mayo"
+author: "Maria Elena Lobato"
+date: '2022-05-18'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<center style="color:lightblue">
+
+<h1>
+
+Mortalidad
+
+</h1>
+
+</center>
+
+**Muerte:** Desaparicion de toda evidencia de vida en cualquier tiempo depues de que una persona haya nacido viva.
+
+[**Tasa bruta de mortalidad**]{style="color:purple"} $$TBM_{t \rightarrow t+n}=\frac{M_{t \rightarrow t+n}}{P_{t \rightarrow t+n}}$$ $M= Muertes\,de\,tiempo\,t\,a\,t+n$
+
+$P=Poblacion\,a\,mitad\,de\,año\,de\,t\,a\,t+n$
+
+**Ejemplo**
+
+Muertes:623300
+
+Poblacion a mitad de año: 127000000
+
+$$TBM=\frac{623300}{127000000}=0.004907$$ $$TBM*1000=4.9$$ La TBM se interpreta como 4.9 muertes por cada 1000 personas
+
+[**Tasa especifica de mortalidad**]{style="color:purple"}
+
+Calcula la mortalidad por grupo de edad y permite conocer la tasa por cada gpo de edad.
+
+La TEM se calcula porque la mortalidad es diferenciada por edad o gpo de edad.
+
+Por ejemplo, la persona de 0 a 9 años tiene una mayor mortalidad que las personas de 1 a 4 años o 5 a 9 años $$TEM_{t \rightarrow t+n}=\frac{{M^i}_{t \rightarrow t+n}}{{P^i}_{t \rightarrow t+n}}$$ $i=gpo\,de\,edad$
+
+$M^i=Muertes\,del\,año\,t\,a\,t+n$
+
+$P^i=Poblacion\,a\,mitad\,de\,año\,t\,a\,t+n$
+
+**Ejemplo**
+
+| Gpo edad | Muertes | Poblacion mitad de año | TEM      | TEM\*1000 |
+|----------|---------|------------------------|----------|-----------|
+| \<1      | 8321    | 12243521               | 0.000679 | 67        |
+| 1 a 4    | 2132    | 12873410               | 0.00016  | 16        |
+| ...      | ...     | ...                    | ...      | ...       |
+| 65-69    | 95748   | 58725910               | 0.0163   | 1630      |
+| 70 o mas | 157197  |                        | 0.0905   | 9050      |
+
+```{r}
+mortalidad <-read.csv(file.choose())
+poblacion <-read.csv(file.choose())
+require(dplyr)
+bcs1 <- poblacion %>%
+  as_tibble()%>%
+  mutate(gpoed=case_when(EDAD==0 ~ 0,
+                         EDAD>=1 & EDAD<=4 ~ 1,
+                         EDAD>=5 & EDAD<=9 ~ 2,
+                         EDAD>=10 & EDAD<=14 ~ 3,
+                         EDAD>=15 & EDAD<=19 ~ 4,
+                         EDAD>=20 & EDAD<=24 ~ 5,
+                         EDAD>=25 & EDAD<=29 ~ 6,
+                         EDAD>=30 & EDAD<=34 ~ 7,
+                         EDAD>=35 & EDAD<=39 ~ 8,
+                         EDAD>=40 & EDAD<=44 ~ 9,
+                         EDAD>=45 & EDAD<=49 ~ 10,
+                         EDAD>=50 & EDAD<=54 ~ 11,
+                         EDAD>=55 & EDAD<=59 ~ 12,
+                         EDAD>=60 & EDAD<=64 ~ 13,
+                         EDAD>=65 & EDAD<=69 ~ 14,
+                         EDAD>=70 & EDAD<=74 ~ 15,
+                         EDAD>=75 & EDAD<=79 ~ 16,
+                         EDAD>=80 & EDAD<=84 ~ 17,
+                         EDAD >= 85 &  EDAD <=109~ 18,
+                         EDAD == 999 ~ 19))%>%
+  select(gpoed,ENT,EDAD,FACTOR)
+require (questionr)
+t1 <- data.frame( wtd.table (bcs1$gpoed, weights = bcs1$FACTOR))
+t1
+def1 <- data.frame(mortalidad,t1)
+tem <- def1$Baja.California.Sur/def1$Freq
+tem
+def2 <- data.frame(def1,tem)
+```
